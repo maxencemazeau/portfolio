@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import NombreProjet from "../component/NombreProjet";
 import Header from "../component/Header";
 import Projet from "../component/Projet";
+import Footer from "../component/Footer";
 
 export default function Home() {
   const [headerHeight, setHeaderHeight] = useState("h-16");
@@ -23,6 +24,7 @@ export default function Home() {
         <div className="flex flex-col">
           <NombreProjet />
           <Projet />
+          <Footer />
         </div>
       </div>
     </div>
