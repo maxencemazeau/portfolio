@@ -16,12 +16,14 @@ export default function Home() {
 
   return (
     <div className="flex flex-col lg:flex-row">
-      <div className={`rounded-lg bg-gray-100 lg:w-64 ${headerHeight}`}>
+      <div className={`sticky top-0 rounded-lg bg-gray-100 lg:w-64 ${headerHeight}`}>
         <Header handleHeight={handleHeaderHeight} />
       </div>
-      <div className="flex flex-col flex-1 lg:ml-8">
-        <NombreProjet />
-        <Projet />
+      <div className="flex flex-col flex-1 lg:ml-4 overflow-y-auto">
+        <div className="flex flex-col">
+          <NombreProjet />
+          <Projet />
+        </div>
       </div>
     </div>
   );
