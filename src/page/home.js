@@ -3,6 +3,7 @@ import NombreProjet from "../component/NombreProjet";
 import Header from "../component/Header";
 import Projet from "../component/Projet";
 import Footer from "../component/Footer";
+import HeroSection from "../component/HeroSection";
 
 export default function Home() {
   const [headerHeight, setHeaderHeight] = useState("h-16");
@@ -17,15 +18,14 @@ export default function Home() {
 
   return (
     <div className="flex flex-col lg:flex-row">
-      <div className={`sticky top-0 rounded-lg bg-gray-100 lg:w-64 ${headerHeight}`}>
+      <div className={`sticky top-0 rounded-lg bg-gray-100 ${headerHeight}`}>
         <Header handleHeight={handleHeaderHeight} />
       </div>
-      <div className="flex flex-col flex-1 lg:ml-4 overflow-y-auto">
-        <div className="flex flex-col">
-          <NombreProjet />
-          <Projet />
-          <Footer />
-        </div>
+      <div className="flex flex-col flex-1 lg:ml-4 ">
+        <HeroSection />
+        <NombreProjet />
+        <Projet />
+        <Footer />
       </div>
     </div>
   );
