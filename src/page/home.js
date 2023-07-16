@@ -18,10 +18,10 @@ export default function Home() {
 
   return (
     <div className="flex flex-col lg:flex-row">
-      <div className={`sticky top-0 rounded-lg bg-gray-100 ${headerHeight}`}>
+      <div className={`rounded-lg bg-gray-100 ${headerHeight} lg:fixed`}>
         <Header handleHeight={handleHeaderHeight} />
       </div>
-      <div className="flex flex-col flex-1 lg:ml-4 ">
+      <div className="flex flex-col flex-1 lg:ml-32">
         <HeroSection />
         <NombreProjet />
         <Projet />
