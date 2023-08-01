@@ -2,6 +2,16 @@ import { useState } from "react"
 
 export default function HeroSection() {
 
+    const [openCV, setOpenCV] = useState(false);
+
+    const openModal = () => {
+        setOpenCV(true);
+    }
+
+    const closeModal = () => {
+        setOpenCV(false);
+    }
+
     return (
         <>
 
@@ -15,12 +25,12 @@ export default function HeroSection() {
                             Developpeur web - Front end
                         </h2>
                         <p>
-                        En tant que Développeur Web Junior ambitieux, je suis passionné par le développement et toujours inspiré par les nouvelles opportunités qu'il offre. Mon expérience combinée à mon ingéniosité me pousse à créer des solutions innovantes sur mesure pour répondre aux besoins spécifiques des clients.
+                            En tant que Développeur Web Junior ambitieux, je suis passionné par le développement et toujours inspiré par les nouvelles opportunités qu'il offre. Mon expérience combinée à mon ingéniosité me pousse à créer des solutions innovantes sur mesure pour répondre aux besoins spécifiques des clients.
                         </p>
                         <div className="items-center gap-x-3 space-y-3 sm:flex sm:space-y-0">
-                            <a href="" className="block py-2 px-4 text-center text-white font-medium bg-indigo-600 duration-150 hover:bg-indigo-500 active:bg-indigo-700 rounded-lg shadow-lg hover:shadow-none">
+                            <button onClick={openModal} href="" className="block py-2 px-4 text-center text-white font-medium bg-indigo-600 duration-150 hover:bg-indigo-500 active:bg-indigo-700 rounded-lg shadow-lg hover:shadow-none">
                                 CV
-                            </a>
+                            </button>
                             <a href="" className="flex items-center justify-center gap-x-2 py-2 px-4 text-gray-700 hover:text-gray-500 font-medium duration-150 active:bg-gray-100 border rounded-lg md:inline-flex">
                                 Me contacter
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
@@ -29,6 +39,19 @@ export default function HeroSection() {
                             </a>
                         </div>
                     </div>
+
+                    {openCV === true ? 
+                         <div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+                         <div class="bg-white p-4 shadow-md rounded-lg w-10/12 h-5/6">
+                         <button onClick={closeModal} href="" className="block py-2 px-4 mb-4 text-center text-white font-medium bg-red-600 duration-150 hover:bg-red-500 active:bg-red-700 rounded-lg shadow-lg hover:shadow-none">
+                                Fermer
+                            </button>
+                             <iframe src="cv.pdf" title="PDF Viewer" class="w-full h-5/6"></iframe>
+                         </div>
+                     </div>
+ 
+                    : null}
+                
                     <div className="mt-14 md:mt-0 md:max-w-xl max-h-64 flex items-center justify-center">
                         <img
                             src="photo.jpg"
