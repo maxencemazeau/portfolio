@@ -24,11 +24,22 @@ export default function Home() {
         <Header handleHeight={handleHeaderHeight} />
       </div>
       <div className="flex flex-col flex-1 lg:ml-32">
-        <HeroSection />
-        <NombreProjet />
-        <Projet />
-        <Contact />
-        <Footer />
+        <div id="hero-section">
+          <HeroSection />
+        </div>
+        <div id="nombre-projet">
+          <NombreProjet />
+        </div>
+        <div id="projet">
+          <Projet />
+        </div>
+        <div id="contact">
+          <Contact />
+        </div>
+        <div id="footer">
+          <Footer />
+        </div>
+
       </div>
     </div>
   );
