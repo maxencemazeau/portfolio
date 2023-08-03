@@ -57,7 +57,7 @@ export default function HeroSection() {
  
                     : null}
                 
-                    <div className="mt-14 md:mt-0 md:max-w-xl max-h-64 flex items-center justify-center">
+                    <div className="mt-28 md:mt-0 md:max-w-xl max-h-64 flex items-center justify-center">
                         <img
                             src="photo.jpg"
                             className="w-full h-full object-cover"
