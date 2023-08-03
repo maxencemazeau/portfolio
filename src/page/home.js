@@ -24,10 +24,10 @@ export default function Home() {
         <Header handleHeight={handleHeaderHeight} />
       </div>
       <div className="flex flex-col flex-1 lg:ml-32">
-        <div id="hero-section">
+        <div id="heroSection">
           <HeroSection />
         </div>
-        <div id="nombre-projet">
+        <div id="nombreProjet">
           <NombreProjet />
         </div>
         <div id="projet">
