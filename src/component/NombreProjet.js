@@ -6,7 +6,7 @@ export default function NombreProjet(){
             title: "Client"
         },
         {
-            data: "0",
+            data: "1",
             title: "Projet personnel"
         },
     ]
