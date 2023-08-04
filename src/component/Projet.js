@@ -5,7 +5,7 @@ export default function Projet () {
             title: "Epée Cégep de Rivère du Loup - Allaitement Quebec",
             desc: "Extension du site web d'Allaitement avec mise en place d'un chat live, d'inscription à des activités et automatisations d'emails. Réalisé dans une équipe de 3 développeurs.",
             img: "allaitement.png",
-            authorName: "Professionnel",
+            authorName: "Client",
             date: "ReactJS / NodeJS / MySQL",
             href: "https://chat.allaitementquebec.org/Connexion"
         },
