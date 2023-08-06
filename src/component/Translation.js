@@ -1,6 +1,6 @@
 // utils/translations.js
-import enTranslation from '../translations/en.json'; // Path to your English translations
-import frTranslation from '../translations/fr.json'; // Path to your French translations
+import enTranslation from '../translation/en.json'; // Path to your English translations
+import frTranslation from '../translation/fr.json'; // Path to your French translations
 
 const translations = {
   en: enTranslation,
@@ -10,6 +10,10 @@ const translations = {
 
 // Default language is English
 let currentLanguage = 'en';
+
+export function getCurrentLanguage() {
+  return currentLanguage;
+}
 
 export function setLanguage(lang) {
   currentLanguage = lang;

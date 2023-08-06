@@ -12,5 +12,11 @@
     "ContactNom" : "Last name - First name",
     "ContactEmail" : "Email",
     "ContactTelephone" : "Phone - Optional",
-    "ContactEnvoyer" : "Send"
+    "ContactEnvoyer" : "Send",
+    "HeaderApropos" : "About",
+    "HeaderProjets" : "Projects",
+    "HeaderContact" : "Contact",
+    "Langue" : "Language",
+    "Francais" : "French",
+    "Anglais" : "English"
 }
