@@ -6,6 +6,8 @@ import Footer from "../component/Footer";
 import HeroSection from "../component/HeroSection";
 import Contact from "../component/Contact";
 
+
+
 export default function Home() {
   const [headerHeight, setHeaderHeight] = useState("h-16");
 
@@ -25,7 +27,7 @@ export default function Home() {
       </div>
       <div className="flex flex-col flex-1 lg:ml-32">
         <div id="heroSection">
-          <HeroSection />
+        <HeroSection />
         </div>
         <div id="nombreProjet">
           <NombreProjet />

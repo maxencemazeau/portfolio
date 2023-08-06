@@ -24,3 +24,4 @@ export function t(key) {
   if (!translation) return key; // Return the key itself if translation is not available
   return translation[key] || key;
 }
+

@@ -1,8 +1,14 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
+import { getCurrentLanguage ,setLanguage, t } from "../component/Translation" 
+import { useTranslation } from "react-i18next";
+
 
 export default function HeroSection() {
 
     const [openCV, setOpenCV] = useState(false);
+
+    //const currentLanguage = getCurrentLanguage();
+    const { t } = useTranslation();
 
     const openModal = () => {
         setOpenCV(true);
@@ -27,10 +33,10 @@ export default function HeroSection() {
                             Maxence MAZEAU
                         </h1>
                         <h2 className="text-4xl text-gray-800 font-extrabold md:text-5xl">
-                            Developpeur web - Front end
+                        {t('JobTitle')}
                         </h2>
                         <p>
-                            En tant que Développeur Web Junior ambitieux, je suis passionné par le développement et toujours inspiré par les nouvelles opportunités qu'il offre. Mon expérience combinée à mon ingéniosité me pousse à créer des solutions innovantes sur mesure pour répondre aux besoins spécifiques des clients.
+                        {t('APropos')}
                         </p>
                         <div className="items-center gap-x-3 space-y-3 sm:flex sm:space-y-0">
                             <button onClick={openModal} href="" className="block py-2 px-4 text-center text-white font-medium bg-indigo-600 duration-150 hover:bg-indigo-500 active:bg-indigo-700 rounded-lg shadow-lg hover:shadow-none">

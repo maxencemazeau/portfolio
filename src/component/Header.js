@@ -1,8 +1,16 @@
 import React, { useState } from 'react';
-import { getCurrentLanguage ,setLanguage, t } from "../component/Translation" 
+//import { getCurrentLanguage ,setLanguage, t } from "../component/Translation" 
+import { useTranslation } from "react-i18next";
 
 const Header = ({ handleHeight }) => {
   const [isExpanded, setIsExpanded] = useState(false);
+
+  const { i18n, t } = useTranslation();
+
+  const onChangeLang = (e) => {
+    const lang_code = e.target.value;
+    i18n.changeLanguage(lang_code);
+  };
 
   const toggleExpand = () => {
     setIsExpanded(!isExpanded);
@@ -24,17 +32,17 @@ const Header = ({ handleHeight }) => {
     contact.scrollIntoView({ behavior : 'smooth' });
 }
 
-const [currentLang, setCurrentLang] = useState(getCurrentLanguage());
+// const [currentLang, setCurrentLang] = useState(getCurrentLanguage());
 
-  const changeFrancais = () => {
-    setLanguage('fr');
-    setCurrentLang('fr'); // Update the language state
-  };
+//   const changeFrancais = () => {
+//     setLanguage('fr');
+//     setCurrentLang('fr'); // Update the language state
+//   };
 
-  const changeAnglais = () => {
-    setLanguage('en');
-    setCurrentLang('en'); // Update the language state
-  };
+//   const changeAnglais = () => {
+//     setLanguage('en');
+//     setCurrentLang('en'); // Update the language state
+//   };
 
   return (
     <div className="flex flex-col h-screen border-e bg-white">
@@ -79,29 +87,18 @@ const [currentLang, setCurrentLang] = useState(getCurrentLanguage());
           </li>
 
           <li>
-            <details className="group">
-              <summary
-                className="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700"
-              >
-                <span className="text-sm font-medium">{t('Langue')}</span>
+          <select className='block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700'
+              defaultValue={i18n.language} onChange={onChangeLang}>
+                  <option value='fr'>
+                    Francais
+                  </option>
+                  <option value='en'>
+                    Anglais
+                  </option>
+              </select>
+             
 
-                <span className="transition duration-300 group-open:-rotate-180">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </span>
-              </summary>
-
-              <ul className="mt-2 space-y-1 px-4">
+              {/* <ul className="mt-2 space-y-1 px-4">
                 <li>
                   <button
                     onClick={changeFrancais}
@@ -119,8 +116,7 @@ const [currentLang, setCurrentLang] = useState(getCurrentLanguage());
                     {t('Anglais')}
                   </button>
                 </li>
-              </ul>
-            </details>
+              </ul> */}
           </li>
           
         </ul>
