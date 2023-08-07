@@ -30,8 +30,14 @@ i18n
                 HeaderContact : "Contact",
                 Langue : "Language",
                 Francais : "French",
-                Anglais : "English"
-        },
+                Anglais : "English",
+                TitreProjet2 : "Hestenn showcase website",
+                DescriptionProjet1 : "Extension of the Allaitement website with live chat, activity registration and email automation. Realized in a team of 3 developers.",
+                DescriptionProjet2 : "Creation and integration of a template for a one-page showcase site for a company.",
+                Footer : "All right reserved.",
+                Ouvrir : "Open",
+                Fermer : "Close"
+        },  
       },
       fr: {
         translation: {         
@@ -49,12 +55,18 @@ i18n
                 ContactEmail : "Courriel",
                 ContactTelephone : "Téléphone - Optionnel",
                 ContactEnvoyer : "Envoyer",
-                HeaderApropos : "A propos",
+                HeaderApropos : "À propos",
                 HeaderProjets : "Projets",
                 HeaderContact : "Contact",
                 Langue : "Langue",
                 Francais : "Francais",
-                Anglais : "Anglais"
+                Anglais : "Anglais",
+                DescriptionProjet1 : "Extension du site web d'Allaitement avec mise en place d'un chat live, d'inscription à des activités et automatisations d'emails. Réalisé dans une équipe de 3 développeurs.",
+                TitreProjet2 : "Site vitrine Hestenn",
+                DescriptionProjet2 : "Création et intégration de template pour un site vitrine one page pour entreprise.",
+                Footer : "Tous droits réservés.",
+                Ouvrir : "Ouvrir",
+                Fermer : "Fermer"
         },
       },
     },

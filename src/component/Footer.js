@@ -1,6 +1,9 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 export default function Footer(){
+
+  const { t } = useTranslation();
 
     return(
         <footer className="bg-white">
@@ -9,7 +12,7 @@ export default function Footer(){
   >
 <div className="border-t-2 border-gray-200"></div>
     <p className="text-xs text-gray-500">
-      &copy; 2023. Maxence MAZEAU. Tous droits réservés.
+      &copy; 2023. Maxence MAZEAU. {t('Footer')}
     </p>
   </div>
 </footer>

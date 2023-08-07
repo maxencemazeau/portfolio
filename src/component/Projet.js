@@ -1,19 +1,23 @@
+import { useTranslation } from 'react-i18next';
+
 export default function Projet () {
+
+    const { t } = useTranslation();
 
     const posts = [
         {
             title: "Epée Cégep de Rivère du Loup - Allaitement Quebec",
-            desc: "Extension du site web d'Allaitement avec mise en place d'un chat live, d'inscription à des activités et automatisations d'emails. Réalisé dans une équipe de 3 développeurs.",
+            desc: t('DescriptionProjet1'),
             img: "allaitement.png",
-            authorName: "Client",
+            authorName: t('Client'),
             date: "ReactJS / NodeJS / MySQL",
             href: "https://chat.allaitementquebec.org/Connexion"
         },
         {
-            title: "Site vitrine Hestenn",
-            desc: "Création et intégration de template pour un site vitrine one page pour entreprise.",
+            title: t('TitreProjet2'),
+            desc: t('DescriptionProjet2'),
             img: "hestenn.png",
-            authorName: "Personnel",
+            authorName: t('Personnel'),
             date: "Html / CSS / Javascript",
             href: "https://www.hestenn.com/"
         },

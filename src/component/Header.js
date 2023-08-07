@@ -32,37 +32,25 @@ const Header = ({ handleHeight }) => {
     contact.scrollIntoView({ behavior : 'smooth' });
 }
 
-// const [currentLang, setCurrentLang] = useState(getCurrentLanguage());
-
-//   const changeFrancais = () => {
-//     setLanguage('fr');
-//     setCurrentLang('fr'); // Update the language state
-//   };
-
-//   const changeAnglais = () => {
-//     setLanguage('en');
-//     setCurrentLang('en'); // Update the language state
-//   };
-
   return (
     <div className="flex flex-col h-screen border-e bg-white">
       <div className="px-4 py-6">
         <button
-          className="block rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700 lg:hidden"
+          className="block rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700 fixed lg:hidden"
           onClick={toggleExpand}
         >
-          {isExpanded ? 'Close Menu' : 'Open Menu'}
+          {isExpanded ? t('Fermer') : t('Ouvrir')}
         </button>
 
         <ul
           className={`mt-6 space-y-1 ${
-            isExpanded ? 'block' : 'hidden lg:block'
+            isExpanded ? 'block fixed' : 'hidden lg:block'
           }`}
         >
           <li>
             <button
               onClick={scrollToHero}
-              className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-700"
+              className="block mt-4 rounded-lg px-4 py-2 text-sm font-medium text-gray-700"
             >
               {t('HeaderApropos')}
             </button>
@@ -90,33 +78,12 @@ const Header = ({ handleHeight }) => {
           <select className='block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700'
               defaultValue={i18n.language} onChange={onChangeLang}>
                   <option value='fr'>
-                    Francais
+                  {t('Francais')}
                   </option>
                   <option value='en'>
-                    Anglais
+                  {t('Anglais')}
                   </option>
               </select>
-             
-
-              {/* <ul className="mt-2 space-y-1 px-4">
-                <li>
-                  <button
-                    onClick={changeFrancais}
-                    className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
-                  >
-                    {t('Francais')}
-                  </button>
-                </li>
-
-                <li>
-                  <button
-                    onClick={changeAnglais}
-                    className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
-                  >
-                    {t('Anglais')}
-                  </button>
-                </li>
-              </ul> */}
           </li>
           
         </ul>

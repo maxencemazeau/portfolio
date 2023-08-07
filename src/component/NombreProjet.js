@@ -1,13 +1,17 @@
+import { useTranslation } from 'react-i18next';
+
 export default function NombreProjet(){
+
+    const { t } = useTranslation();
 
     const stats = [
         {
             data: "1",
-            title: "Client"
+            title: t('Client')
         },
         {
             data: "1",
-            title: "Projet personnel"
+            title: t('Personnel')
         },
     ]
 
@@ -16,7 +20,7 @@ export default function NombreProjet(){
             <div className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
                 <div className="max-w-2xl mx-auto text-center">
                     <h3 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
-                        Mes projets professionels et personnels
+                        {t('TitreProjet')}
                     </h3>                 
                 </div>
                 <div className="mt-12">

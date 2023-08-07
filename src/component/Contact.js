@@ -1,6 +1,9 @@
 import React from "react"
+import { useTranslation } from 'react-i18next';
 
 export default function Contact() {
+
+  const { t } = useTranslation();
 
 return(
 <section className="bg-gray-100 mt-16">
@@ -8,8 +11,7 @@ return(
     <div className="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5">
       <div className="lg:col-span-2 lg:py-12">
         <p className="max-w-xl text-lg">
-        Si vous avez des questions concernant mes projets, compétences ou tout autre sujet lié au développement web, n'hésitez pas à me contacter. Je suis toujours ouvert à de nouvelles opportunités de collaboration,
-         que ce soit pour un projet à court terme ou une collaboration à plus long terme.
+        {t('ContactText')}
         </p>
 
         <div className="mt-8">
@@ -18,7 +20,7 @@ return(
           </a>
 
           <address className="mt-2 not-italic">
-            Ville de Québec, QC
+          {t('Ville')}
           </address>
         </div>
       </div>
@@ -29,7 +31,7 @@ return(
             <label className="sr-only" for="name">Nom - Prénom</label>
             <input
               className="w-full rounded-lg border-gray-200 p-3 text-sm"
-              placeholder="Nom - Prénom"
+              placeholder={t('ContactNom')}
               type="text"
               id="name"
             />
@@ -40,7 +42,7 @@ return(
               <label className="sr-only" for="email">Courriel</label>
               <input
                 className="w-full rounded-lg border-gray-200 p-3 text-sm"
-                placeholder="Courriel"
+                placeholder={t('ContactEmail')}
                 type="email"
                 id="email"
               />
@@ -50,7 +52,7 @@ return(
               <label className="sr-only" for="phone">Téléphone - Optionnel</label>
               <input
                 className="w-full rounded-lg border-gray-200 p-3 text-sm"
-                placeholder="Téléphone - Optionnel"
+                placeholder={t('ContactTelephone')}
                 type="tel"
                 id="phone"
               />
@@ -75,7 +77,7 @@ return(
               type="submit"
               className="inline-block w-full rounded-lg bg-black px-5 py-3 font-medium text-white sm:w-auto"
             >
-              Envoyer
+              {t('ContactEnvoyer')}
             </button>
           </div>
         </form>
