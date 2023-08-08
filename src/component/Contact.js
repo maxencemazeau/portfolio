@@ -52,7 +52,7 @@ return(
               <label className="sr-only" for="phone">Téléphone - Optionnel</label>
               <input
                 className="w-full rounded-lg border-gray-200 p-3 text-sm"
-                placeholder={t('ContactSujet')}
+                placeholder={t('ContactTelephone')}
                 type="tel"
                 id="phone"
               />
