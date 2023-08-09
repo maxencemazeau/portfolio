@@ -36,7 +36,9 @@ i18n
                 DescriptionProjet2 : "Creation and integration of a template for a one-page showcase site for a company.",
                 Footer : "All right reserved.",
                 Ouvrir : "Open",
-                Fermer : "Close"
+                Fermer : "Close",
+                AlertTitre : "Email sent",
+                AlertMessage : "Thank you for your email. I will get back to you as soon as possible."
         },  
       },
       fr: {
@@ -66,7 +68,9 @@ i18n
                 DescriptionProjet2 : "Création et intégration de template pour un site vitrine one page pour entreprise.",
                 Footer : "Tous droits réservés.",
                 Ouvrir : "Ouvrir",
-                Fermer : "Fermer"
+                Fermer : "Fermer",
+                AlertTitre : "Courriel envoyé",
+                AlertMessage : "Merci pour votre courriel. Je vous répondrais dans les plus bref délais."
         },
       },
     },

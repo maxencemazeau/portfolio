@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { useTranslation } from 'react-i18next';
 import axios from 'axios'
+import Alert from "./Alert";
 
 export default function Contact() {
 
@@ -8,12 +9,18 @@ export default function Contact() {
   const [objet, setObjet] = useState('');
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
+  const [alert, setAlert] = useState(false);
 
   const { t } = useTranslation();
 
   const envoieCourriel = async(e) => {
     e.preventDefault();
     await axios.post(`http://localhost:8080/send-email`, { email , sujet, objet, name})
+    setAlert(true);
+  }
+
+  const closeAlert = async() => {
+    setAlert(false)
   }
 
 return(
@@ -62,7 +69,7 @@ return(
             </div>
 
             <div>
-              <label className="sr-only" for="phone">Téléphone - Optionnel</label>
+              <label className="sr-only" for="phone">Sujet - Optionnel</label>
               <input
                 className="w-full rounded-lg border-gray-200 p-3 text-sm"
                 placeholder={t('ContactTelephone')}
@@ -100,6 +107,9 @@ return(
       </div>
     </div>
   </div>
+
+  {alert && 
+  <Alert closeAlert={closeAlert}  />}
 </section>
 )
 }
