@@ -1,9 +1,20 @@
-import React from "react"
+import React, { useState } from "react"
 import { useTranslation } from 'react-i18next';
+import axios from 'axios'
 
 export default function Contact() {
 
+  const [sujet, setSujet] = useState('');
+  const [objet, setObjet] = useState('');
+  const [email, setEmail] = useState('');
+  const [name, setName] = useState('');
+
   const { t } = useTranslation();
+
+  const envoieCourriel = async(e) => {
+    e.preventDefault();
+    await axios.post(`http://localhost:8080/send-email`, { email , sujet, objet, name})
+  }
 
 return(
 <section className="bg-gray-100 mt-16">
@@ -34,6 +45,7 @@ return(
               placeholder={t('ContactNom')}
               type="text"
               id="name"
+              onChange={(e) => setName(e.target.value)}
             />
           </div>
 
@@ -45,6 +57,7 @@ return(
                 placeholder={t('ContactEmail')}
                 type="email"
                 id="email"
+                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
 
@@ -55,6 +68,7 @@ return(
                 placeholder={t('ContactTelephone')}
                 type="tel"
                 id="phone"
+                onChange={(e) => setSujet(e.target.value)}
               />
             </div>
           </div>
@@ -69,12 +83,14 @@ return(
               placeholder="Message"
               rows="8"
               id="message"
+              onChange={(e) => setObjet(e.target.value)}
             ></textarea>
           </div>
 
           <div className="mt-4">
             <button
               type="submit"
+              onClick={envoieCourriel}
               className="inline-block w-full rounded-lg bg-black px-5 py-3 font-medium text-white sm:w-auto"
             >
               {t('ContactEnvoyer')}
