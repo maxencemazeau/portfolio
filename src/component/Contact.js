@@ -15,7 +15,7 @@ export default function Contact() {
 
   const envoieCourriel = async(e) => {
     e.preventDefault();
-    await axios.post(`http://localhost:8080/send-email`, { email , sujet, objet, name})
+    await axios.post(`https://testemail.onrender.com/send-email`, { email , sujet, objet, name})
     setAlert(true);
   }
 

@@ -6,7 +6,6 @@ export default function HeroSection() {
 
     const [openCV, setOpenCV] = useState(false);
 
-    //const currentLanguage = getCurrentLanguage();
     const { t } = useTranslation();
 
     const openModal = () => {

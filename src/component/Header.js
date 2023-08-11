@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-//import { getCurrentLanguage ,setLanguage, t } from "../component/Translation" 
+import React, { useState } from 'react'; 
 import { useTranslation } from "react-i18next";
 
 const Header = ({ handleHeight }) => {
