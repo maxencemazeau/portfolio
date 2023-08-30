@@ -21,6 +21,14 @@ export default function Projet () {
             date: "Html / CSS / Javascript",
             href: "https://www.hestenn.com/"
         },
+        {
+            title: t('TitreProjet3'),
+            desc: t('DescriptionProjet3'),
+            img: "wiseFinance.png",
+            authorName: t('Personnel'),
+            date: "ReactJs / NodeJS-Fastify / Tailwinds",
+            href: "https://financewebsite.vercel.app/"
+        },
     ]
     
     return (
